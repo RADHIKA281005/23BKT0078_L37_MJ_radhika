@@ -1,0 +1,107 @@
+/* Product Card Container */
+.product-card {
+  width: 280px; /* Set a fixed width for uniformity */
+  height: 400px; /* Ensure all cards are the same height */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Adds a nice hover effect */
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: 200px; /* Ensure all images are the same height */
+  object-fit: cover; /* Ensures the image fills the space nicely */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Product Details */
+.product-card .product-info {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Product Title */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Product Description */
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Price */
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.product-card .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-card button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.product-card .add-to-cart {
+  background: #007bff;
+  color: white;
+}
+
+.product-card .add-to-cart:hover {
+  background: #0056b3;
+}
+
+.product-card .view-details {
+  background: #28a745;
+  color: white;
+}
+
+.product-card .view-details:hover {
+  background: #1e7e34;
+}
+
+/* Product List Grid */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center all products */
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
